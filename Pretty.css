@@ -1,0 +1,16 @@
+img {
+  /*Get The images a unifor size for every round */
+  border: 2px solid yellow;
+  height: 300px;
+  width: 300px;
+}
+
+li {
+  position: relative;
+  display: inline;
+}
+
+li img.active {
+  color: black;
+  
+}
