@@ -1,4 +1,16 @@
-if img url === img url:
-  do not hide anything
-else:
-  revert to black and give wrong Animation
+// deck of all cards in game
+const deck = document.getElementById("card-deck");
+
+function shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+
+    while (currentIndex !== 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+    }
+
+    return array;
+}
