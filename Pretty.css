@@ -1,12 +1,31 @@
 body{
-  background-color: lightgreen;
+  background: radial-gradient(#98fb98, #008000, #adff2c, #006400);
+}
+@font-face {
+    font-family: MarioNett;
+    src: url("MarioNett.ttf") format("truetype");
 }
 
+
+h1{
+  font-family: MarioNett, Verdana, Tahoma;
+  font-style: italic;
+  color: #008ecc;
+  font-size: 120px;
+  text-shadow: 45px 36px blue;
+}
+p {
+  font-size: 50px;
+  font-family: MarioNett;
+  color: blue;
+}
 img {
   /*Get The images a unifor size for every round */
-  border: 2px solid blue;
+  border: 4px solid #ff7700;
   height: 300px;
   width: 300px;
+  margin: 5px;
+  background: radial-gradient(#fff59d, #ff7700);
 }
 
 li {
