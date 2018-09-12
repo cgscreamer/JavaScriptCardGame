@@ -1,16 +1,28 @@
 // deck of all cards in game
 const deck = document.getElementById("card-deck");
 
-function shuffle(array) {
-    var currentIndex = array.length, temporaryValue, randomIndex;
+//Array containing all of the cards
 
-    while (currentIndex !== 0) {
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex -= 1;
-        temporaryValue = array[currentIndex];
-        array[currentIndex] = array[randomIndex];
-        array[randomIndex] = temporaryValue;
-    }
+const roundOneCardsArray = [
+  {
+    'name': 'PrincessPeach'
+    'img' : 'graphics/Round_One/PrincessPeach.png'
+  },
+  {
+    'name': 'SuperMario'
+    'img' : 'graphics/Round_One/Super_Mario.png'
+  },
+  {
+    'name': 'Toad'
+    'img' : 'graphics/Round_One/Toad.png'
+  },
+  {
+    'name': 'Luigi'
+    'img' : 'graphics/Round_One/Luigi.png'
+  },
+];
 
-    return array;
+var ul = document.querySelector('ul');
+  for (var i = ul.children.length; i >= 0; i--) {
+    ul.appendChild(ul.children[Math.random() * i | 0]);
 }
