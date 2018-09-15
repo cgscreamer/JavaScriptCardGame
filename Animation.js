@@ -1,8 +1,12 @@
-// deck of all cards in game
-const deck = document.getElementById("card-deck");
+// array for the cards
+const cards = document.querySelectorAll('.memory_card');
 
-//Array containing all of the cards
+function flipCard(){
+  this.classList.toggle('flip');
+}
 
+cards.forEach(card => card.addEventListener('click', flipCard));
+/*
 const roundOneCardsArray = [
   {
     'name': 'PrincessPeach'
@@ -26,3 +30,4 @@ var ul = document.querySelector('ul');
   for (var i = ul.children.length; i >= 0; i--) {
     ul.appendChild(ul.children[Math.random() * i | 0]);
 }
+*/
