@@ -1,33 +1,32 @@
-// array for the cards
 const cards = document.querySelectorAll('.memory_card');
 
-function flipCard(){
-  this.classList.toggle('flip');
+let hasFlippedCard = false;
+let firstCard, secondCard;
+
+function flipCard() {
+  this.classList.add('flip');
+
+  if (!hasFlippedCard) {
+    // first click
+    hasFlippedCard = true;
+    firstCard = this;
+  } else {
+    // second click
+    hasFlippedCard = false;
+    secondCard = this;
+
+    if (firstCard.dataset.framework === secondCard.dataset.framework) {
+      // it's a match!
+      firstCard.removeEventListener('click', flipCard);
+      secondCard.removeEventListener('click', flipCard);
+    } else {
+      // not a match
+      setTimeout(() => {
+        firstCard.classList.remove('flip');
+        secondCard.classList.remove('flip');
+      }, 1500);
+    }
+  }
 }
 
 cards.forEach(card => card.addEventListener('click', flipCard));
-/*
-const roundOneCardsArray = [
-  {
-    'name': 'PrincessPeach'
-    'img' : 'graphics/Round_One/PrincessPeach.png'
-  },
-  {
-    'name': 'SuperMario'
-    'img' : 'graphics/Round_One/Super_Mario.png'
-  },
-  {
-    'name': 'Toad'
-    'img' : 'graphics/Round_One/Toad.png'
-  },
-  {
-    'name': 'Luigi'
-    'img' : 'graphics/Round_One/Luigi.png'
-  },
-];
-
-var ul = document.querySelector('ul');
-  for (var i = ul.children.length; i >= 0; i--) {
-    ul.appendChild(ul.children[Math.random() * i | 0]);
-}
-*/

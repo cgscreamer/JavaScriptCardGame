@@ -61,21 +61,16 @@ transform: rotateY(180deg);
 }
 
 .back_face:hover{
-  -webkit-transition:1.2s;
-  -moz-transition: 1.2s;
-  -ms-transition: 1.2s;
-  -o-transition: 1.2s;
+  -webkit-transition:0.8s;
+  -moz-transition: 0.8s;
+  -ms-transition: 0.8s;
+  -o-transition: 0.8s;
   -webkit-transform: rotate(360deg);
   -moz-transform: rotate(360deg);
   -o-transform: rotate(360deg);
   -ms-transform: rotate(360deg);
   transform: rotate(360deg);
 
-}
-.memory_card:active{
-  /*Defines the behaviour of the card when clicked */
-  transform: scale(.97);
-  transition: .2s;
 }
 
 .memory_card.flip{
