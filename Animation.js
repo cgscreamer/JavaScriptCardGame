@@ -14,8 +14,27 @@ function flipCard()
   if (!hasFlippedCard) {
     hasFlippedCard = true;
     firstCard = this;
+<<<<<<< HEAD
 
     return;
+=======
+  } else {
+    // second click
+    hasFlippedCard = false;
+    secondCard = this;
+
+    if (firstCard.dataset.framework === secondCard.dataset.framework) {
+      // it's a match!
+      firstCard.removeEventListener('click', flipCard);
+      secondCard.removeEventListener('click', flipCard);
+    } else {
+      // not a match
+      setTimeout(() => {
+        firstCard.classList.remove('flip');
+        secondCard.classList.remove('flip');
+      }, 500);
+    }
+>>>>>>> 63c1e5550759469479a6c44537561d6078e57c86
   }
 
   secondCard = this;
