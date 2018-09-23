@@ -1,11 +1,10 @@
 const cards = document.querySelectorAll('.memory_card');
-/*sets default behaviours*/
+
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
 
-function flipCard()
-/*sets the behaviour for flipping cards*/ {
+function flipCard() {
   if (lockBoard) return;
   if (this === firstCard) return;
 
@@ -14,34 +13,15 @@ function flipCard()
   if (!hasFlippedCard) {
     hasFlippedCard = true;
     firstCard = this;
-    return;
-  }
-  else {
-    // second click
-    hasFlippedCard = false;
-    secondCard = this;
 
-    if (firstCard.dataset.framework === secondCard.dataset.framework) {
-      // it's a match!
-      firstCard.removeEventListener('click', flipCard);
-      secondCard.removeEventListener('click', flipCard);
-    }
-    else {
-      // not a match
-      setTimeout(() => {
-        firstCard.classList.remove('flip');
-        secondCard.classList.remove('flip');
-      }, 500);
-    }
+    return;
   }
 
   secondCard = this;
   checkForMatch();
 }
 
-function checkForMatch()
-/*checks if cards match */
-{
+function checkForMatch() {
   let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
 
   isMatch ? disableCards() : unflipCards();
@@ -55,7 +35,6 @@ function disableCards() {
 }
 
 function unflipCards() {
-  /*unflips cards that do not match */
   lockBoard = true;
 
   setTimeout(() => {
@@ -67,15 +46,13 @@ function unflipCards() {
 }
 
 function resetBoard() {
-  /* makes sure that the cards don't get stuck if clicked twice */
   [hasFlippedCard, lockBoard] = [false, false];
   [firstCard, secondCard] = [null, null];
 }
 
 (function shuffle() {
-  /*Shuffles the order of the deck*/
   cards.forEach(card => {
-    let randomPos = Math.floor(Math.random() * 8);
+    let randomPos = Math.floor(Math.random() * 16);
     card.style.order = randomPos;
   });
 })();
