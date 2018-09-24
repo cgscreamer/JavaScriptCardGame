@@ -9,7 +9,7 @@ body{
 }
 
 
-h1 {
+.MarioTitle {
   font-family: MarioNett, Verdana, Tahoma;
   font-style: italic;
   color: #008ecc;
@@ -17,7 +17,7 @@ h1 {
   text-shadow: 45px 36px blue;
 }
 
-p {
+.MarioText {
   font-size: 50px;
   font-family: MarioNett;
   color: blue;
