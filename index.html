@@ -3,11 +3,21 @@
 <title>Welcome! Let's play a game</title>
 </head>
 <body>
-  <form class="YoNameSon">
-  First, tell us your name:<br>
-  <input type="text" name="firstname">
-  <br><br>
-  <input type="submit" value="Submit">
-</form>
+  <div class='wrapper'>
+      <form id='nameForm'>
+      <div class='form-uname'>
+          <lable id='nameLable' for='nameField'>Hey, what's your name?:</lable>
+        </br>
+          <input id='playerName' type='text' maxlength='25'></input>
+      </div>
+      <div class='form-sub'>
+          <button id='subButton' type='button'>Print your name!</button>
+      </div>
+  </form>
+
+  <div>
+      <p id='result'></p></div>
+  </div>
+<script src="Animation.js"></script>
 </body>
 </html>

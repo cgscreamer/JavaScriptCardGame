@@ -58,7 +58,24 @@ function resetBoard() {
 })();
 
 cards.forEach(card => card.addEventListener('click', flipCard));
-
+/*
 function timeTheGame(){
 
 }
+*/
+// the function which handles the input field logic
+function getUserName() {
+    var playerName = document.getElementById('playerName').value;
+    var result = document.getElementById('result');
+
+    if (playerName.length < 3) {
+        result.textContent = 'Your name must be at least three(3) characters long';
+        //alert('Username must contain at least 3 characters');
+    } else {
+        result.textContent = 'Awesome! Welcome to the game, ' + playerName;
+        //alert(playerName);
+    }
+}
+// use an eventlistener for the event
+var subButton = document.getElementById('subButton');
+subButton.addEventListener('click', getUserName, false);
