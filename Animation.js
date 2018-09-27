@@ -71,8 +71,12 @@ function getUserName() {
     if (playerName.length < 3) {
         result.textContent = 'Your name must be at least three(3) characters long';
         //alert('Username must contain at least 3 characters');
-    } else {
-        result.textContent = 'Awesome! Welcome to the game, ' + playerName;
+    }
+    else if (playerName.length >10) {
+        result.textContent = 'Just your First Name, not your life story';
+    }
+    else {
+        result.textContent = 'Awesome! Welcome to the game, ' + playerName + '!';
         //alert(playerName);
     }
 }
