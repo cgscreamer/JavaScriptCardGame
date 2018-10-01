@@ -78,8 +78,18 @@ function getUserName() {
     else {
         result.textContent = 'Awesome! Welcome to the game, ' + playerName + '!';
         //alert(playerName);
+
     }
 }
 // use an eventlistener for the event
 var subButton = document.getElementById('subButton');
 subButton.addEventListener('click', getUserName, false);
+
+var startButton = document.getElementbyId('startButton');
+startButton.addEventListener('click', )
+
+/* Do the following:
+-ask user if they want to proceed
+-hide window
+-create a 'let's start' subButton
+*/

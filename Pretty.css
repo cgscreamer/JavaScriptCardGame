@@ -9,8 +9,20 @@ body{
     src: url("MarioNett.ttf") format("truetype");
 }
 
+.form-uname{
+  padding: 200px;
 
-
+}
+#nameLabel{
+  font-size: 50px;
+  font-family: MarioNett;
+  color: blue;
+}
+#result{
+  font-size: 50px;
+  font-family: MarioNett;
+  color: blue;
+}
 .MarioTitle {
   font-family: MarioNett, Verdana, Tahoma;
   font-style: italic;
