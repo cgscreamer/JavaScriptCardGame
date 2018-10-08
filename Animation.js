@@ -77,16 +77,22 @@ function getUserName() {
     }
     else {
         result.textContent = 'Awesome! Welcome to the game, ' + playerName + '!';
+
+// 2. Append somewhere
+        document.getElementById("result")[0];
+result.appendChild(button);
         //alert(playerName);
 
     }
 }
+var button = document.createElement("button");
+button.innerHTML = "Let's Start!";
+button.addEventListener('click', function() {
+  window.open("Round_One.html");
+});
 // use an eventlistener for the event
 var subButton = document.getElementById('subButton');
 subButton.addEventListener('click', getUserName, false);
-
-var startButton = document.getElementbyId('startButton');
-startButton.addEventListener('click', )
 
 /* Do the following:
 -ask user if they want to proceed
