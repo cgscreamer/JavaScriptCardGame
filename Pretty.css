@@ -1,0 +1,106 @@
+body{
+  height: 100vh;
+  background: radial-gradient(#98fb98, #008000, #adff2c, #006400);
+
+}
+
+@font-face {
+    font-family: MarioNett;
+    src: url("MarioNett.ttf") format("truetype");
+}
+
+.form-uname{
+  padding: 100px;
+
+}
+#nameLabel{
+  font-size: 50px;
+  font-family: MarioNett;
+  color: blue;
+}
+#result{
+  font-size: 50px;
+  font-family: MarioNett;
+  color: blue;
+}
+
+button {
+  margin-top: 20px;
+  line-height: 60px;
+  font-weight: bold;
+  padding: 0 40px;
+  background: #008ecc;
+  border: none;
+}
+button:hover {
+  background: gold;
+}
+
+.MarioTitle {
+  font-family: MarioNett, Verdana, Tahoma;
+  font-style: italic;
+  color: #008ecc;
+  font-size: 120px;
+  text-shadow: 45px 36px blue;
+}
+
+.MarioText {
+  font-size: 50px;
+  font-family: MarioNett;
+  color: blue;
+}
+.memory_Game{
+  height: 640px;
+  width: 640px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+.memory_card {
+  /*Get The images a uniform size for every round */
+  width: calc(25% - 10px);
+  height: calc(33.333% - 10px);
+  margin: 5px;
+  position: relative;
+  border: 4px solid #ff6000;
+  box-shadow: 5px 5px 7px #de4520;
+  height: 25%;
+  margin: 5px;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: .5s;
+}
+
+.front_face, .back_face {
+  /*image inherits the settings from the list */
+height: 100%;
+width: 100%;
+position: absolute;
+backface-visibility: hidden;
+border: 4px solid #ff6000;
+box-shadow: 5px 5px 7px #de4520;
+background: radial-gradient(#fff59d, #ff7700);
+}
+
+.front_face{
+transform: rotateY(180deg);
+}
+
+.back_face:hover{
+  -webkit-transition:0.8s;
+  -moz-transition: 0.8s;
+  -ms-transition: 0.8s;
+  -o-transition: 0.8s;
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+
+}
+
+.memory_card.flip{
+    /*Defines the behaviour of the card when clicked */
+  transform: rotateY(180deg);
+}
