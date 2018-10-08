@@ -29,11 +29,11 @@ button {
   line-height: 60px;
   font-weight: bold;
   padding: 0 40px;
-  background: lightblue;
+  background: #008ecc;
   border: none;
 }
 button:hover {
-  background: lightsalmon;
+  background: gold;
 }
 
 .MarioTitle {
