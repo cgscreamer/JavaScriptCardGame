@@ -66,21 +66,25 @@ function resetBoard() {
 cards.forEach(card => card.addEventListener('click', flipCard));
 //allows the cards to be flipped
 
-//game timer
-var second = 0, minute = 0;
-var timer = document.querySelector(".timer");
-var interval;
-function startTimer(){
-    interval = setInterval(function(){
-        timer.innerHTML = minute+"mins "+second+"secs";
-        second++;
-        if(second == 60){
-            minute++;
-            second = 0;
-        }
-        if(minute == 60){
-            hour++;
-            minute = 0;
-        }
-    },1000);
+//game timer that tracks and shows how long each round takes
+function gameTimer(){
+  var second = 0, minute = 0;
+  var timer = document.querySelector(".timer");
+  var interval;
+  function startTimer(){
+      interval = setInterval(function(){
+          timer.textContent = minute+"mins "+second+"secs";
+          second++;
+          if(second == 60){
+              minute++;
+                second = 0;
+              }
+              if(minute == 60){
+                hour++;
+                minute = 0;
+              }
+            },1000);
+          }
 }
+
+document.body.onload = gameTimer();
