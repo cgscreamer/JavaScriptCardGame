@@ -10,7 +10,7 @@ body{
 }
 
 .form-uname{
-  padding: 200px;
+  padding: 100px;
 
 }
 #nameLabel{
@@ -23,6 +23,19 @@ body{
   font-family: MarioNett;
   color: blue;
 }
+
+button {
+  margin-top: 20px;
+  line-height: 60px;
+  font-weight: bold;
+  padding: 0 40px;
+  background: #008ecc;
+  border: none;
+}
+button:hover {
+  background: gold;
+}
+
 .MarioTitle {
   font-family: MarioNett, Verdana, Tahoma;
   font-style: italic;
